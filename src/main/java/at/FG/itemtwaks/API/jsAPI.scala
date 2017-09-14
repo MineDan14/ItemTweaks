@@ -1,6 +1,6 @@
-package at.FG.mymod.API
+package at.FG.itemtwaks.API
 
-import at.FG.mymod.lists
+import at.FG.itemtwaks.lists
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.Item
 

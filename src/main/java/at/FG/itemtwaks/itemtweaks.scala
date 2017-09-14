@@ -1,20 +1,20 @@
-package com.example.examplemod
+package at.FG.itemtwaks
 
 import java.io.{File, FileReader, FilenameFilter, Reader}
 import javax.script.ScriptEngineManager
 
-import at.FG.mymod.API.jsAPI
+import at.FG.itemtwaks.API.jsAPI
 import net.minecraft.init.Blocks
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.EventHandler
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 import net.minecraftforge.fml.common.event._
 import net.minecraftforge.fml.common.registry.{ForgeRegistries, GameRegistry}
-import at.FG.mymod.items.testitem
+import at.FG.itemtwaks.items.testitem
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.{Item, ItemStack}
 import net.minecraftforge.common.config.Configuration
-import at.FG.mymod.lists
+import at.FG.itemtwaks.lists
 
 
 
@@ -31,10 +31,10 @@ object MyMod {
   @EventHandler
   def postInit(event: FMLPostInitializationEvent): Unit = {
 
-    at.FG.mymod.lists.init()    // initializing all needed lists ( items, Creativetabs, ...
+    at.FG.itemtwaks.lists.init()    // initializing all needed lists ( items, Creativetabs, ...
 
     var engine = new ScriptEngineManager().getEngineByName("nashorn") // creating a new nashorn engine to interptet th scripts
-    engine.eval("var jsAPI = Java.type('at.FG.mymod.API.it');")       // loading the Itemtweaks api into the compiler
+    engine.eval("var jsAPI = Java.type('at.FG.itemtwaks.API.it');")       // loading the Itemtweaks api into the compiler
 
     val folder = new File("./scripts/it");
     val list_of_files = folder.listFiles(new FilenameFilter {         ////creating a filter for js files

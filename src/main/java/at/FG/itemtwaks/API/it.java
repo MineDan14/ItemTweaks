@@ -1,4 +1,4 @@
-package at.FG.mymod.API;
+package at.FG.itemtwaks.API;
 
 import net.minecraft.item.Item;
 

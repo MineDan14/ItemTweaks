@@ -1,4 +1,4 @@
-package at.FG.mymod.items;
+package at.FG.itemtwaks.items;
 
 import net.minecraft.item.Item;
 

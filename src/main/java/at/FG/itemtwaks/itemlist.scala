@@ -1,4 +1,4 @@
-package at.FG.mymod
+package at.FG.itemtwaks
 
 import net.minecraft.creativetab
 import net.minecraft.creativetab.CreativeTabs
