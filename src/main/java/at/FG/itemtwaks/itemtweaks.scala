@@ -19,8 +19,8 @@ import at.FG.itemtwaks.lists
 
 
 @Mod(modid = "itemtweaks", version = "1.0", modLanguage = "scala")
-object MyMod {
-  val MODID="itemtweaks";
+object itemtweaks {
+  val MODID="itemtweaks"
   //val config = new Configuration(new File("./config/mymod.config"))
 
   @EventHandler
@@ -34,16 +34,16 @@ object MyMod {
     at.FG.itemtwaks.lists.init()    // initializing all needed lists ( items, Creativetabs, ...
 
     var engine = new ScriptEngineManager().getEngineByName("nashorn") // creating a new nashorn engine to interptet th scripts
-    engine.eval("var jsAPI = Java.type('at.FG.itemtwaks.API.it');")       // loading the Itemtweaks api into the compiler
+    engine.eval("var jsAPI = Java.type('at.FG.itemtwaks.API.jsAPI');")       // loading the Itemtweaks api into the compiler
 
-    val folder = new File("./scripts/it");
+    val folder = new File("./scripts/it")
     val list_of_files = folder.listFiles(new FilenameFilter {         ////creating a filter for js files
       override def accept(dir: File, name: String): Boolean = {
-        return name.contains(".js")
+        name.contains(".js")
       }
     })
 
-    System.out.println(list_of_files.length+" Files found");
+    System.out.println(list_of_files.length+" Files found")
     list_of_files.foreach(U=>{
       System.out.println("Executed"+U.getName)
       engine.eval(new FileReader(U))
