@@ -35,7 +35,7 @@ object itemtweaks{
 
   @EventHandler
   def preInit(event: FMLPreInitializationEvent): Unit = {
-    System.out.println("Itemtweaks PreInit")
+    System.out.println("Itemtweaks PreInit") //
   }
 
   @EventHandler
